@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Delete Page</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'editPage.css')}}">
+        <link rel="stylesheet" href="../static/navBar.css">
+    </head>
+
+    <body style = "background-color: aliceblue;">
+        <div class="topnav">
+            <div class="intopnav">
+            <a class="inactive" href="/">Home</a>
+            <a class="inactive" href="addPage.html">Add Item</a>
+            <a class="active" href="deleteOrEdit.html">Edit/Delete</a>
+            <a class="inactive" href="SearchPage.html">Search</a>
+        </div>
+        </div>
+        <br>
+        <div style = "text-align: center; margin: 0 auto; width: 80%">
+            <h1 style = "text-align: center;">Enter the details of the member you would like to edit or replace: </h1>
+            <hr style = "width: 80%">
+            <br/>
+
+            <form id = "deleteForm">
+                <label for = "member" style = "text-decoration: underline; font-size: 4vh;">Member Type:</label>
+                <input type = "radio" id = "student" name = "member" value = "student" required>
+                <label for = "student" style = "font-size: 3vh;">Student</label>
+                <input type = "radio" id = "faculty" name = "member" value = "faculty">
+                <label for = "faculty" style = "font-size: 3vh;">Faculty</label><br/>
+
+                <label for = "uniqID" style = "text-decoration: underline; font-size: 4vh;">Unique ID:</label>
+                &nbsp;<input type = "text" id = "uniqID" name = "uniqID" placeholder="Enter the unique ID" required><br/>
+                
+                <br/><br/>
+                <button type = "submit">Submit?</button>
+            </form>
+     
+        </div>
+      
+        <br/><br/>
+        <div id = "addTextHere"></div> 
+
+        <script src = "{{ url_for('static', filename = 'editScript.js') }}"></script>
+    </body>
+</html>

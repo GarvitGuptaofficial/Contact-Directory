@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Add a student to the database</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'addStudentPage.css') }}">
+        <link rel="stylesheet" href="../static/navBar.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <div class="intopnav">
+            <a class="inactive" href="/">Home</a>
+            <a class="active" href="addPage.html">Add Item</a>
+            <a class="inactive" href="deleteOrEdit.html">Edit/Delete</a>
+            <a class="inactive" href="SearchPage.html">Search</a>
+        </div>
+        </div>
+        <br>
+        <h2>Enter Student Details</h2>
+        <hr style = "width: 80%">
+        
+        <form method = "POST" action = "/studentAdded">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder = "John Doe" required><br/><br>
+            
+            <label for = "gender">Gender: </label>
+            <input type = "text" id = "gender" name = "gender" placeholder= "Enter your gender"><br/><br/>
+
+            <label for = "rollNum">Roll Number: </label>
+            <input type = "number" id = "rollNum" name = "rollNum" placeholder = "Enter your roll Number" required><br/><br/>
+
+            <label for = "age">Age: </label>
+            <input type = "number" id = "age" name = "age" placeholder="Enter your age" required><br/><br/>
+
+            <label for = "email">Email: </label>
+            <input type = "email" id = "email" name = "email" placeholder="name@domain" required><br/><br/>
+
+            <label for = "phoneNum">Phone Number: </label>
+            <input type = "number" id = "phoneNum" name = "phoneNum" placeholder="Enter your phone number" required><br/><br/>
+
+            <label for = "Hostel">Hostel: </label>
+            <input type = "radio" id = "Bakul" name = "Hostel" value = "Bakul Nivas" style = "margin-left: 11%;">
+            <label for = "Bakul">Bakul Nivas</label>
+            <input type = "radio" id = "NBH" name = "Hostel" value = "New Boys Hostel">
+            <label for = "NBH">New Boys Hostel</label>
+            <input type = "radio" id = "OBH" name = "Hostel" value = "Old Boys Hostel">
+            <label for = "OBH">Old Boys Hostel</label>
+            <input type = "radio" id = "Parijat" name = "Hostel" value = "Parijat Nivas">
+            <label for = "Parijat">Parijat Nivas</label><br/><br/>
+
+            <label for = "program">Program: </label>
+            <input type = "text" id = "program" name = "program" placeholder = "CSE, ECE, CSD etc."><br/><br/>
+
+            <label for = "degree">Degree: </label>
+            <input type = "text" id = "degree" name = "degree" placeholder = "BTech, MS, PHd etc."><br/><br/>
+            
+            <label for = "Batch">Batch: </label>
+            <input type = "radio" id = "UG1" name = "Batch" value = "UG1" style = "margin-left: 16.5%;">
+            <label for = "UG1">UG1</label>
+            <input type = "radio" id = "UG2" name = "Batch" value = "UG2">
+            <label for = "UG2">UG2</label>
+            <input type = "radio" id = "UG3" name = "Batch" value = "UG3">
+            <label for = "UG3">UG3</label>
+            <input type = "radio" id = "UG4" name = "Batch" value = "UG4">
+            <label for = "UG4">UG4</label>
+            <input type = "radio" id = "MS" name = "Batch" value = "MS">
+            <label for = "MS">MS</label>
+            <input type = "radio" id = "PHd" name = "Batch" value = "PHd">
+            <label for = "PHd">PHd</label><br/><br/>
+            
+            <button type = "submit" style = "margin-left: 47%; font-size: 2.5vh">Submit?</button>
+
+        </form>
+    </body>
+</html>

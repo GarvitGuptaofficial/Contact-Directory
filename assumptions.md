@@ -1,0 +1,1 @@
+1. The unique factor in every student and faculty member is the student id (roll number) and faculty id, respectively. Hence, any edits or deletes can only be performed by providing this detail. Additionally, inserting two members with the same roll number (in te students db) or faculty id (in the faculty db) will not be allowed. 

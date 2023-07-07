@@ -1,0 +1,17 @@
+body {
+    background-color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    margin-left: 30%;
+}
+
+input:not([type = "submit"]) {
+    position: absolute;
+    right: 30%;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>:)</title>
+        <link rel="stylesheet" href="../static/navBar.css">
+    </head>
+
+    <body style = "background-color:aliceblue">
+        <div class="topnav">
+            <div class="intopnav">
+            <a class="inactive" href="/">Home</a>
+            <a class="active" href="addPage.html">Add Item</a>
+            <a class="inactive" href="deleteOrEdit.html">Edit/Delete</a>
+            <a class="inactive" href="SearchPage.html">Search</a>
+        </div>
+        </div>
+        <br>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4 style = "text-align: center;">{{ message }}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <form action = "/">
+            <button type = "submit" style = "margin-left: 47%;">Back to Home?</button>
+        </form>
+        <br/>
+        <form action = "/addPage.html">
+            <button type = "submit" style = "margin-left: 45.5%;">Add Another Member?</button>
+        </form>
+    
+    </body>
+</html>

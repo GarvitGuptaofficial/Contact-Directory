@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Add a student to the database</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'addFacPage.css')}}">
+        <link rel="stylesheet" href="../static/navBar.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <div class="intopnav">
+            <a class="inactive" href="/">Home</a>
+            <a class="active" href="addPage.html">Add Item</a>
+            <a class="inactive" href="deleteOrEdit.html">Edit/Delete</a>
+            <a class="inactive" href="SearchPage.html">Search</a>
+        </div>
+        </div>
+        <br>
+        <h2>Enter Faculty Details</h2>
+        <hr style = "width: 60%">
+        
+        <form action = "/facultyAdded" method = "POST">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder = "John Doe" required><br/><br>
+            
+            <!-- <label for = "gender">Gender: </label>
+            <input type = "text" id = "gender" name = "gender" placeholder= "Enter your gender"><br/><br/> -->
+
+            <label for = "facID">Faculty ID: </label>
+            <input type = "number" id = "facID" name = "facID" placeholder = "Enter your faculty ID" required><br/><br/>
+
+            <label for = "email">Email: </label>
+            <input type = "email" id = "email" name = "email" placeholder="name@domain"><br/><br/>
+
+            <label for = "phoneNum">Phone Number: </label>
+            <input type = "number" id = "phoneNum" name = "phoneNum" placeholder="Enter your phone number" required><br/><br/>
+
+            <label for = "resArea">Research Areas: </label>
+            <input type = "text" id = "resArea" name = "resArea" placeholder = "AI, Game Theory, etc."><br/><br/>
+
+            <label for = "designation">Designation: </label>
+            <input type = "text" id = "designation" name = "designation" placeholder = "Designation of the individual"><br/><br/>
+
+            <label for = "quals">Qualfications: </label>
+            <input type = "text" id = "quals" name = "quals" placeholder = "Qualifications of the individual"><br/><br/>
+            
+            <button type = "submit" style = "margin-left: 45%; font-size: 2.5vh;">Submit?</button>
+
+        </form>
+    </body>
+</html>

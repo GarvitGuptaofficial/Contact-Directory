@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Directory Search</title>
+  <link rel="stylesheet" href="../static/navBar.css">
+  <link rel = "stylesheet" href = "../static/searchStu.css">
+</head>
+<body>
+  <div class="topnav">
+    <div class="intopnav">
+    <a class="inactive" href="/">Home</a>
+    <a class="inactive" href="addPage.html">Add Item</a>
+    <a class="inactive" href="deleteOrEdit.html">Edit/Delete</a>
+    <a class="active" href="SearchPage.html">Search</a>
+</div>
+</div>
+<br>
+  <h1>Student Directory Search</h1>
+   <div class="filters">
+
+     <div class="filter">
+    <p>Name:</p>
+    <input type="text" id="name"  placeholder="Enter name...">
+    </div>
+
+    <div class="filter">
+    <p>College ID:</p>
+    <input type="text" id="collegeId" name="collegeId" placeholder="Enter college ID...">
+    </div>
+     
+    <div class="filter">
+     <p>Phone Number:</p>
+    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number...">
+      </div>
+      
+    <button type="submit" onclick="search()">Search</button>
+  </div>
+
+  <table> 
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>College ID</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Degree</th>
+        <th>Hostel</th>
+        <th>Program</th>
+        <th>Batch</th>
+        <th>Section</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+  
+  <p id="noresults" style="color:black;"></p>
+</body>
+<script src="../static/search_student.js"></script>
+</html>

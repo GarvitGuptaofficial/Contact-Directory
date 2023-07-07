@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contact Directory</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'homepage.css') }}">
+        <link rel="stylesheet" href="../static/navBar.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="intopnav">
+            <a class="active" href="/">Home</a>
+            <a class="inactive" href="addPage.html">Add Item</a>
+            <a class="inactive" href="deleteOrEdit.html">Edit/Delete</a>
+            <a class="inactive" href="SearchPage.html">Search</a>
+        </div>
+        </div>
+        <br>
+		<p id="text" style="color: black;font-size: 30px;text-align: center;"></p>
+        <script>
+            var text = "IIIT Hyderabad: Contact Directory";
+            var index = 0;
+            var speed = 50;
+    
+            function type() {
+                if (index < text.length) {
+                    document.getElementById("text").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                }
+            }
+    
+            window.onload = type;
+        </script>
+        <hr style="width: 80%">
+
+        <div style="
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: center;
+        align-items: center;
+        ">
+            <div class = "homePageButtonsDiv">
+                <a href = "addPage.html">
+                    <button class = "addButton">
+                        Add an item to the database
+                    </button>
+                </a>
+            </div>
+
+            <div class = "homePageButtonsDiv">
+                    <a href="SearchPage.html">
+                    <button class = "searchButton">
+                        Search for an item in the database
+                    </button>
+                </a>
+            </div>
+
+            <div class = "homePageButtonsDiv">
+                <a href="deleteOrEdit.html">
+                    <button class = "searchButton">
+                        Delete, Edit or Replace an Item in the database
+                    </button> 
+                </a>
+            </div>
+
+        </div>
+
+        <hr style = "margin-top: 5%; width: 60%;"/>
+        <div class = "homeImageDiv">
+            <img src = "{{ url_for('logo') }}" style = "height: 80%; width: 35%;">
+        </div>
+
+    </body>
+</html>

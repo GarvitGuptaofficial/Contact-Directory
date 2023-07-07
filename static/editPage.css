@@ -1,0 +1,17 @@
+body {
+    background-color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+}
+
+label:not([for="Bakul"]):not([for="NBH"]):not([for="OBH"]):not([for="Parijat"]):not([for="UG1"]):not([for="UG2"]):not([for="UG3"]):not([for="UG4"]):not([for="MS"]):not([for="PHd"]):not([for="member"]):not([for="student"]):not([for="faculty"]):not([for="uniqID"]) {
+    margin-left: 30%;
+}
+
+input:not([type = "radio"]):not([type="submit"]):not([id="uniqID"]) {
+    position: absolute;
+    right: 30%;
+}
+
